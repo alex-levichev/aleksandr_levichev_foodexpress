@@ -1,5 +1,3 @@
--- FOOD-109: пользователь inspector и права доступа
-
 DO $$
 BEGIN
     IF NOT EXISTS (
@@ -13,17 +11,27 @@ BEGIN
 END;
 $$;
 
-GRANT ALL PRIVILEGES
+REVOKE ALL PRIVILEGES
+ON SCHEMA levichev_food FROM inspector;
+
+GRANT USAGE
 ON SCHEMA levichev_food TO inspector;
 
-GRANT ALL PRIVILEGES
-ON ALL TABLES IN SCHEMA levichev_food TO inspector;
+REVOKE ALL PRIVILEGES
+ON ALL TABLES IN SCHEMA levichev_food
+FROM inspector;
 
-GRANT ALL PRIVILEGES
-ON ALL SEQUENCES IN SCHEMA levichev_food TO inspector;
+GRANT SELECT
+ON ALL TABLES IN SCHEMA levichev_food
+TO inspector;
+
+REVOKE ALL PRIVILEGES
+ON ALL SEQUENCES IN SCHEMA levichev_food
+FROM inspector;
 
 GRANT EXECUTE
-ON ALL ROUTINES IN SCHEMA levichev_food TO inspector;
+ON ALL ROUTINES IN SCHEMA levichev_food
+TO inspector;
 
 GRANT USAGE
 ON SCHEMA exts TO inspector;

@@ -2063,7 +2063,6 @@ ALTER TABLE ONLY levichev_food.review
 -- Name: SCHEMA levichev_food; Type: ACL; Schema: -
 --
 
-GRANT ALL ON SCHEMA levichev_food TO inspector;
 
 
 --
@@ -2072,7 +2071,6 @@ GRANT ALL ON SCHEMA levichev_food TO inspector;
 -- Name: PROCEDURE add_product(IN p_product_name character varying, IN p_product_category_id uuid, IN p_price numeric, IN p_restaurant_id uuid, IN p_photo_url text, IN p_rating numeric, IN p_status levichev_food.product_status, IN p_description text); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.add_product(IN p_product_name character varying, IN p_product_category_id uuid, IN p_price numeric, IN p_restaurant_id uuid, IN p_photo_url text, IN p_rating numeric, IN p_status levichev_food.product_status, IN p_description text) TO inspector;
 
 
 --
@@ -2081,7 +2079,6 @@ GRANT ALL ON PROCEDURE levichev_food.add_product(IN p_product_name character var
 -- Name: FUNCTION check_order_address(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.check_order_address() TO inspector;
 
 
 --
@@ -2090,7 +2087,6 @@ GRANT ALL ON FUNCTION levichev_food.check_order_address() TO inspector;
 -- Name: FUNCTION check_order_product_restaurant(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.check_order_product_restaurant() TO inspector;
 
 
 --
@@ -2099,7 +2095,6 @@ GRANT ALL ON FUNCTION levichev_food.check_order_product_restaurant() TO inspecto
 -- Name: FUNCTION check_order_restaurant_change(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.check_order_restaurant_change() TO inspector;
 
 
 --
@@ -2108,7 +2103,6 @@ GRANT ALL ON FUNCTION levichev_food.check_order_restaurant_change() TO inspector
 -- Name: FUNCTION check_payment_amount(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.check_payment_amount() TO inspector;
 
 
 --
@@ -2117,7 +2111,6 @@ GRANT ALL ON FUNCTION levichev_food.check_payment_amount() TO inspector;
 -- Name: FUNCTION check_product_restaurant_change(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.check_product_restaurant_change() TO inspector;
 
 
 --
@@ -2126,7 +2119,6 @@ GRANT ALL ON FUNCTION levichev_food.check_product_restaurant_change() TO inspect
 -- Name: FUNCTION check_review_client(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.check_review_client() TO inspector;
 
 
 --
@@ -2135,7 +2127,6 @@ GRANT ALL ON FUNCTION levichev_food.check_review_client() TO inspector;
 -- Name: FUNCTION check_review_product(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.check_review_product() TO inspector;
 
 
 --
@@ -2144,7 +2135,6 @@ GRANT ALL ON FUNCTION levichev_food.check_review_product() TO inspector;
 -- Name: PROCEDURE courier_salary(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.courier_salary() TO inspector;
 
 
 --
@@ -2153,7 +2143,6 @@ GRANT ALL ON PROCEDURE levichev_food.courier_salary() TO inspector;
 -- Name: PROCEDURE erase_test_data(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.erase_test_data() TO inspector;
 
 
 --
@@ -2162,7 +2151,6 @@ GRANT ALL ON PROCEDURE levichev_food.erase_test_data() TO inspector;
 -- Name: PROCEDURE generate_client_addresses(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_client_addresses() TO inspector;
 
 
 --
@@ -2171,7 +2159,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_client_addresses() TO inspector;
 -- Name: PROCEDURE generate_courier_pay(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_courier_pay() TO inspector;
 
 
 --
@@ -2180,7 +2167,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_courier_pay() TO inspector;
 -- Name: PROCEDURE generate_couriers(IN value integer); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_couriers(IN value integer) TO inspector;
 
 
 --
@@ -2189,7 +2175,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_couriers(IN value integer) TO insp
 -- Name: PROCEDURE generate_order_structure(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_order_structure() TO inspector;
 
 
 --
@@ -2198,7 +2183,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_order_structure() TO inspector;
 -- Name: PROCEDURE generate_orders(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_orders() TO inspector;
 
 
 --
@@ -2207,7 +2191,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_orders() TO inspector;
 -- Name: PROCEDURE generate_payments(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_payments() TO inspector;
 
 
 --
@@ -2216,7 +2199,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_payments() TO inspector;
 -- Name: PROCEDURE generate_product_categories(IN value integer); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_product_categories(IN value integer) TO inspector;
 
 
 --
@@ -2225,7 +2207,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_product_categories(IN value intege
 -- Name: PROCEDURE generate_products(IN value integer); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_products(IN value integer) TO inspector;
 
 
 --
@@ -2234,7 +2215,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_products(IN value integer) TO insp
 -- Name: PROCEDURE generate_restaurants(IN value integer); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_restaurants(IN value integer) TO inspector;
 
 
 --
@@ -2243,7 +2223,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_restaurants(IN value integer) TO i
 -- Name: PROCEDURE generate_reviews(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.generate_reviews() TO inspector;
 
 
 --
@@ -2252,7 +2231,6 @@ GRANT ALL ON PROCEDURE levichev_food.generate_reviews() TO inspector;
 -- Name: FUNCTION get_statistic(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.get_statistic() TO inspector;
 
 
 --
@@ -2261,7 +2239,6 @@ GRANT ALL ON FUNCTION levichev_food.get_statistic() TO inspector;
 -- Name: PROCEDURE insert_test_data(IN value integer); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.insert_test_data(IN value integer) TO inspector;
 
 
 --
@@ -2270,7 +2247,6 @@ GRANT ALL ON PROCEDURE levichev_food.insert_test_data(IN value integer) TO inspe
 -- Name: FUNCTION rating_change(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.rating_change() TO inspector;
 
 
 --
@@ -2279,7 +2255,6 @@ GRANT ALL ON FUNCTION levichev_food.rating_change() TO inspector;
 -- Name: PROCEDURE recalculate_order_amounts(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON PROCEDURE levichev_food.recalculate_order_amounts() TO inspector;
 
 
 --
@@ -2288,7 +2263,6 @@ GRANT ALL ON PROCEDURE levichev_food.recalculate_order_amounts() TO inspector;
 -- Name: FUNCTION sync_order_pay_status(); Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON FUNCTION levichev_food.sync_order_pay_status() TO inspector;
 
 
 --
@@ -2297,7 +2271,6 @@ GRANT ALL ON FUNCTION levichev_food.sync_order_pay_status() TO inspector;
 -- Name: TABLE address; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.address TO inspector;
 
 
 --
@@ -2306,7 +2279,6 @@ GRANT ALL ON TABLE levichev_food.address TO inspector;
 -- Name: TABLE client; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.client TO inspector;
 
 
 --
@@ -2315,7 +2287,6 @@ GRANT ALL ON TABLE levichev_food.client TO inspector;
 -- Name: TABLE client_address; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.client_address TO inspector;
 
 
 --
@@ -2324,7 +2295,6 @@ GRANT ALL ON TABLE levichev_food.client_address TO inspector;
 -- Name: TABLE courier; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.courier TO inspector;
 
 
 --
@@ -2333,7 +2303,6 @@ GRANT ALL ON TABLE levichev_food.courier TO inspector;
 -- Name: TABLE courier_pay; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.courier_pay TO inspector;
 
 
 --
@@ -2342,7 +2311,6 @@ GRANT ALL ON TABLE levichev_food.courier_pay TO inspector;
 -- Name: TABLE "order"; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food."order" TO inspector;
 
 
 --
@@ -2351,7 +2319,6 @@ GRANT ALL ON TABLE levichev_food."order" TO inspector;
 -- Name: TABLE how_much_money; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.how_much_money TO inspector;
 
 
 --
@@ -2360,7 +2327,6 @@ GRANT ALL ON TABLE levichev_food.how_much_money TO inspector;
 -- Name: TABLE order_structure; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.order_structure TO inspector;
 
 
 --
@@ -2369,7 +2335,6 @@ GRANT ALL ON TABLE levichev_food.order_structure TO inspector;
 -- Name: TABLE payment; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.payment TO inspector;
 
 
 --
@@ -2378,7 +2343,6 @@ GRANT ALL ON TABLE levichev_food.payment TO inspector;
 -- Name: TABLE product; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.product TO inspector;
 
 
 --
@@ -2387,7 +2351,6 @@ GRANT ALL ON TABLE levichev_food.product TO inspector;
 -- Name: TABLE product_category; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.product_category TO inspector;
 
 
 --
@@ -2396,7 +2359,6 @@ GRANT ALL ON TABLE levichev_food.product_category TO inspector;
 -- Name: TABLE restaurant; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.restaurant TO inspector;
 
 
 --
@@ -2405,7 +2367,6 @@ GRANT ALL ON TABLE levichev_food.restaurant TO inspector;
 -- Name: TABLE review; Type: ACL; Schema: levichev_food
 --
 
-GRANT ALL ON TABLE levichev_food.review TO inspector;
 
 
 -- Completed on 2026-11-13 20:22:59 MSK
