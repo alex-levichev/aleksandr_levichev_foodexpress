@@ -282,12 +282,12 @@ begin
 			values (exts.uuid_generate_v4(), dish_names[k], cat_ids[n],
 				(15 + floor(random() * 106)::int) * 10,
 				rest_ids[i],
-				case when random() < 0.5 then null
-					else 'https://foodexpress.ru/menu/photo_' || (i * 5 + j) || '.jpg' end,
+				null,
 				null,
 				case when random() < 0.85 then 'доступно'::product_status
 					else product_statuses[1 + floor(random() * array_length(product_statuses, 1))::int] end,
-				'Порция ' || (200 + floor(random() * 300)::int) || ' г, готовится по рецепту шефа')
+				case when cat_base[n] = 10 then 'Объём ' || (25 + floor(random() * 26)::int) * 10 || ' мл'
+					else 'Порция ' || (200 + floor(random() * 300)::int) || ' г, готовится по рецепту шефа' end)
 			returning product_id, price into new_id, o_amount;
 
 			prod_ids = prod_ids || new_id;
@@ -497,8 +497,7 @@ begin
 		values (exts.uuid_generate_v4(), ord_client[i],
 			least(localtimestamp, coalesce(ord_delivery[i], ord_ts[i]) + random() * interval '2 days'),
 			e_id, e_type, ord_ids[i], txt,
-			case when random() < 0.7 then null
-				else 'https://foodexpress.ru/reviews/photo_' || (done + 1) || '.jpg' end,
+			null,
 			r_rating)
 		on conflict (order_id, entity_type, entity_id) do nothing;
 		get diagnostics rc = row_count;
