@@ -395,6 +395,11 @@ begin
 		end if;
 		if o_status = 'доставлен' then
 			o_delivery = o_ts + (30 + floor(random() * 61)::int) * interval '1 minute';
+			-- доставка в том же месяце, что и заказ
+			if date_trunc('month', o_delivery) <> date_trunc('month', o_ts) then
+				o_ts = date_trunc('month', o_ts) + interval '1 month' - interval '2 hours';
+				o_delivery = o_ts + (30 + floor(random() * 61)::int) * interval '1 minute';
+			end if;
 		else
 			o_delivery = null;
 		end if;
@@ -531,7 +536,7 @@ begin
 		into m_cnt, m_sum
 		from generate_series(first_month, date_trunc('month', localtimestamp), interval '1 month') as m(m)
 		left join (
-			select date_trunc('month', o.delivery_timestamp) as month_start,
+			select date_trunc('month', o.order_timestamp) as month_start,
 				count(*) as cnt,
 				sum(o.commission) as commission_sum
 			from "order" o

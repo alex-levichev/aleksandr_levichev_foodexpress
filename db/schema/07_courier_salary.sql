@@ -19,8 +19,8 @@ begin
 	left join levichev_food."order" o
 		on o.courier_id = c.courier_id
 		and o.status = 'доставлен'
-		and o.delivery_timestamp >= month_start
-		and o.delivery_timestamp < month_end
+		and o.order_timestamp >= month_start
+		and o.order_timestamp < month_end
 	group by c.courier_id, c.coefficient, cp.coefficient_used
 	on conflict (year, month, courier_id) do update
 	set amount = excluded.amount,
@@ -38,8 +38,8 @@ begin
 		select o.courier_id, count(*) as cnt
 		from levichev_food."order" o
 		where o.status = 'доставлен'
-			and o.delivery_timestamp >= month_start
-			and o.delivery_timestamp < month_end
+			and o.order_timestamp >= month_start
+			and o.order_timestamp < month_end
 		group by o.courier_id) d on d.courier_id = c2.courier_id
 	where c.courier_id = c2.courier_id
 		and c.status <> 'уволен';

@@ -4,8 +4,8 @@ set search_path to levichev_food, exts;
 
 create or replace view how_much_money as
 with recursive bounds as (
-	select date_trunc('month', min(o.delivery_timestamp))::date as first_month,
-		date_trunc('month', max(o.delivery_timestamp))::date as last_month
+	select date_trunc('month', min(o.order_timestamp))::date as first_month,
+		date_trunc('month', max(o.order_timestamp))::date as last_month
 	from levichev_food."order" o
 	where o.status = 'доставлен'
 ),
@@ -19,7 +19,7 @@ months as (
 	join bounds b on m.month_start < b.last_month
 ),
 orders_by_month as (
-	select date_trunc('month', o.delivery_timestamp)::date as month_start,
+	select date_trunc('month', o.order_timestamp)::date as month_start,
 		sum(o.order_amount) as sum_no_commission,
 		sum(o.total_amount) as sum_with_commission
 	from levichev_food."order" o
